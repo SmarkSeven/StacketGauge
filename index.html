@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <script src="./lib/d3.min.js"></script>
+  <script src="./stackerGauge.js"></script>
+</head>
+<body>
+  <svg id="stacker" width="300" height="100" style="font-family: Helvetica; font-weight: bold;" onclick="stacker.update(Math.random()*100)"></svg>
+  <script language="JavaScript">
+    let config = new StackerGaugeSettings()
+    config.vertical = false
+    config.barBoxPadding = 3
+    const stacker = new StackerGauge("stacker", "NO", 55, config)
+    stacker.render()
+  </script>
+</body>
+</html>
